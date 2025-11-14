@@ -63,12 +63,13 @@ function checkout(slotId) {
 
     let price = slot.vehicle.hours * 5;
 
-    document.getElementById("checkoutDetails").innerHTML = `
+   document.getElementById("checkoutDetails").innerHTML = `
         <strong>Owner:</strong> ${slot.vehicle.owner}<br>
         <strong>Vehicle:</strong> ${slot.vehicle.number}<br>
-        <strong>Hours:</strong> ${slot.vehicle.hours}<br>
-        <strong>Total Price:</strong> $${price}
+        <strong>Hours Parked:</strong> ${slot.vehicle.hours} hour(s)<br>
+        <strong>Total Amount (Edit Branch):</strong> $${price}
     `;
+
 
     document.getElementById("checkoutModal").style.display = "flex";
 
