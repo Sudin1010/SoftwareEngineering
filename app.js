@@ -46,7 +46,7 @@ document.getElementById("vehicleForm").addEventListener("submit", function(e) {
     let freeSlot = parkingSlots.find(s => s.status === "available");
 
     if (!freeSlot) {
-        alert("No available parking slots!");
+        alert(" parking slots is not available!");
         return;
     }
 
