@@ -67,7 +67,11 @@ function checkout(slotId) {
         <strong>Owner:</strong> ${slot.vehicle.owner}<br>
         <strong>Vehicle:</strong> ${slot.vehicle.number}<br>
         <strong>Hours Parked:</strong> ${slot.vehicle.hours} hour(s)<br>
+<<<<<<< HEAD
       <strong>Total Charge (Main Branch):</strong>
+=======
+        <strong>Total Amount (Edit Branch):</strong>
+>>>>>>> edit-feature
 
     `;
 
