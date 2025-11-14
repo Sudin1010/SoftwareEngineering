@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parking Management Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2 class="logo">ParkManager</h2>
+
+        <ul class="menu">
+            <li class="active">Dashboard</li>
+            <li>Parking Spaces</li>
+            <li>Vehicles</li>
+            <li>Users</li>
+            <li>Payments</li>
+            <li>Analytics</li>
+            <li>Settings</li>
+        </ul>
+    </aside>
+
+    <!-- Main Area -->
+    <main class="main">
+
+        <h1>Parking Management System</h1>
+
+        <section class="cards">
+            <div class="card">
+                <h3>Total Spaces</h3>
+                <p class="value">150</p>
+            </div>
+            <div class="card">
+                <h3>Occupied</h3>
+                <p class="value">89</p>
+            </div>
+            <div class="card">
+                <h3>Available</h3>
+                <p class="value">61</p>
+            </div>
+            <div class="card">
+                <h3>Today's Revenue</h3>
+                <p class="value">$1,248</p>
+            </div>
+        </section>
+
+        <div class="top-bar">
+            <h2>Parking Spaces Overview</h2>
+            <button class="add-btn" onclick="openForm()">+ Add Vehicle</button>
+        </div>
+
+        <!-- Parking Grid -->
+        <section class="parking-grid" id="parkingGrid"></section>
+
+    </main>
+</div>
+
+<!-- Add Vehicle Modal -->
+<div class="modal" id="formModal">
+    <div class="modal-content">
+        <h3>Add Vehicle</h3>
+
+        <form id="vehicleForm">
+
+            <label>Owner Name</label>
+            <input type="text" id="ownerName" required>
+
+            <label>Vehicle Number</label>
+            <input type="text" id="vehicleNumber" required>
+
+            <label>Vehicle Type</label>
+            <select id="vehicleType">
+                <option>Car</option>
+                <option>Bike</option>
+                <option>Van</option>
+            </select>
+
+            <label>Hours of Parking</label>
+            <input type="number" id="parkingHours" required>
+
+            <button type="submit">Add Vehicle</button>
+            <button type="button" class="close-btn" onclick="closeForm()">Cancel</button>
+        </form>
+    </div>
+</div>
+
+<!-- Checkout Modal -->
+<div class="modal" id="checkoutModal">
+    <div class="modal-content">
+        <h3>Checkout Details</h3>
+        <p id="checkoutDetails"></p>
+        <button onclick="closeCheckout()">Close</button>
+    </div>
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
